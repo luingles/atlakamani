@@ -1,36 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import React, { useState, useEffect, Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logo from './atlakamani2.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
+  //set a sate on the navbar
+  const [navbar, setNavbar] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
+
+  //Change the background when you scroll on the y-axis
+  const changeBackground = () => {
+    if(window.scrollY >= 80 && window.scrollY <= 1600){
+      setNavbar(true);
+    }    
+    else {
+      setNavbar(false);
     }
   };
 
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
-
+  window.addEventListener('scroll', changeBackground);
+ 
   return (
     <>
-      <nav className='navbar'>
+      <nav className={navbar ? 'navbar fade' : 'navbar'}>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
+            <img alt="atlakamani" className="atlakamani-logo" src={logo} />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -59,22 +57,17 @@ function Navbar() {
                 Products
               </Link>
             </li>
-
-            <li>
-              <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                Amenities
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
     </>
   );
-}
+
+  }
 
 export default Navbar;
