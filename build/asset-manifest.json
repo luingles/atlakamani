@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/atlakamani/static/css/main.0d14d057.chunk.css",
+    "main.js": "/atlakamani/static/js/main.b6ac1bff.chunk.js",
+    "main.js.map": "/atlakamani/static/js/main.b6ac1bff.chunk.js.map",
+    "runtime-main.js": "/atlakamani/static/js/runtime-main.83bc8f3f.js",
+    "runtime-main.js.map": "/atlakamani/static/js/runtime-main.83bc8f3f.js.map",
+    "static/js/2.f6b7c641.chunk.js": "/atlakamani/static/js/2.f6b7c641.chunk.js",
+    "static/js/2.f6b7c641.chunk.js.map": "/atlakamani/static/js/2.f6b7c641.chunk.js.map",
+    "index.html": "/atlakamani/index.html",
+    "static/css/main.0d14d057.chunk.css.map": "/atlakamani/static/css/main.0d14d057.chunk.css.map",
+    "static/js/2.f6b7c641.chunk.js.LICENSE.txt": "/atlakamani/static/js/2.f6b7c641.chunk.js.LICENSE.txt",
+    "static/media/atlakamani2.126e918a.png": "/atlakamani/static/media/atlakamani2.126e918a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83bc8f3f.js",
+    "static/js/2.f6b7c641.chunk.js",
+    "static/css/main.0d14d057.chunk.css",
+    "static/js/main.b6ac1bff.chunk.js"
+  ]
+}
